@@ -1,0 +1,11 @@
+services:
+  discord-bot:
+    build: .
+    container_name: qualitay
+    restart: always
+    environment:
+      DISCORD_BOT_TOKEN: '(...)'
+      DISCORD_CHANNEL_ID: '(...)'
+    volumes:
+      - ./config.yaml:/app/config.yaml
+      - ./cache.yaml:/app/cache.yaml
